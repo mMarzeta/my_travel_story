@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title_block %}
+    {% load static %}
+    Registration
+{% endblock %}
+
+{% block body_block %}
+    <div class="containter">
+    <div style="background-color:#8EC156">
+        <div class="container">
+	        <div class="row">
+                <center><img src="{% static 'logo.png' %}" style="width:268px;height:128px;"/></center>
+            </div>
+        </div>
+	</div>
+    <div class="container">
+    {% if registered %}
+          <div class="jumbotron">
+        <center><h1>Thank You for registration!</h1> </center></br>
+        <center><a href="{% url 'login' %}">Now you can log in</a></center>
+        </div>
+    {% else %}
+        <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+        <form id="user_form" method="post" action="{% url 'register' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <div class="row">
+                <button type="submit" class="btn btn-primary btn-block">
+                    Register
+                </button>
+            </div>
+        </form>
+        </div>
+        </div>
+    {% endif %}
+{% endblock %}

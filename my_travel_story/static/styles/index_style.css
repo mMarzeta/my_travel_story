@@ -1,0 +1,120 @@
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#menu-bar {
+    width: 100%;
+    background-color: #1d83f5;
+    display: inline-block;
+    margin:0;
+}
+
+#menu-bar div{
+    height: 100%;
+    display:inherit;
+}
+
+#name_log{
+    display:inline-block;
+}
+
+#search_box{
+    margin-left:35%;
+    height:100%;
+    width:15%;
+}
+#search_box input{
+    width:100%;
+    height:100%;
+}
+
+#logout_box{
+    left:20%;
+    width:12%;
+}
+#logout_box a input{
+    height:100%;
+    width:100%;
+}
+
+#avatar {
+    height:100%;
+}
+
+#side-bar {
+
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    height: 90%;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 1);
+    float: left;
+}
+#map-canvas {
+    height: 90%;
+    width: 75%;
+}
+#side-bar-wrapper {
+    width: 100%;;
+    z-index: 1000;
+
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.side_bar_nav {
+    margin: 0;
+    padding: 0;
+    position: inherit;
+    width: inherit;
+    list-style: none;
+}
+
+.side_bar_nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.side_bar_nav li a {
+    display: block;
+    text-decoration: none;
+    color: #524c4c;
+}
+
+.side_bar_nav li a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 0, 1);
+    background: rgb(147, 208, 255);
+}
+
+#myModal {
+    visibility: hidden;
+    position:fixed;
+    background-color: #8EC156;
+    top:0;
+    left:35%;
+    width: 30%;
+    height: 20%;
+    z-index: 1;
+}
+
+#myModalContent{
+    display:table;
+    margin:0 auto;
+}
+
+
+
+
+

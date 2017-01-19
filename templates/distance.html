@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head_block %}
+    {% load static %}
+{% endblock %}
+
+{% block body_block %}
+    <div class="containter">
+    <div style="background-color:#8EC156">
+        <div class="container">
+	        <div class="row">
+                <center><img src="{% static 'logo.png' %}" style="width:268px;height:128px;"/></center>
+            </div>
+        </div>
+	</div>
+        </div>
+
+    <form id="measure_form" method="post" action="{% url 'measure_distance' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="date" name="start_date"/>
+<input type="date" name="end_date"/>
+            <button class="btn btn-primary">Submit</button>
+</form>
+{{ login }}
+    {{ name }}
+    <br>
+---------
+            {% for place in places %}
+
+                <p>{{ place.arrival }}-{{ place.departure }}</p>
+                <p>{{ place.latitude }} -$$$- {{ place.longtitude }}</p>
+                -----------
+            {% endfor %}
+    Total distance: {{ distance }}
+    <a href="{% url 'index' %}">INDEX</a>
+{% endblock %}
